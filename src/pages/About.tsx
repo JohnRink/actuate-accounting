@@ -50,9 +50,9 @@ const About = () => {
           <div className="hidden md:block">
             <div className="sticky top-24">
               <img
-                src="/lovable-uploads/29a4f141-905d-4533-8687-6191b08665c0.png"
-                alt="Professional pen"
-                className="w-full h-auto rounded-lg shadow-lg"
+                src="/lovable-uploads/2600644c-2133-4913-b34e-c39f3ea2e55d.png"
+                alt="Professional metallic pen"
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
               />
             </div>
           </div>
