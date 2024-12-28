@@ -46,14 +46,16 @@ const About = () => {
             </section>
           </div>
 
-          {/* Right Column - Decorative Image */}
+          {/* Right Column - Decorative Image with seamless integration */}
           <div className="hidden md:block">
             <div className="sticky top-24">
-              <img
-                src="/lovable-uploads/2600644c-2133-4913-b34e-c39f3ea2e55d.png"
-                alt="Professional metallic pen"
-                className="w-full h-auto rounded-lg shadow-lg object-cover"
-              />
+              <div className="bg-sand p-8 rounded-3xl">
+                <img
+                  src="/lovable-uploads/2600644c-2133-4913-b34e-c39f3ea2e55d.png"
+                  alt="Professional metallic pen"
+                  className="w-full h-auto object-cover mix-blend-multiply filter contrast-125 saturate-50"
+                />
+              </div>
             </div>
           </div>
         </div>
