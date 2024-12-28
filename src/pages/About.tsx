@@ -8,22 +8,13 @@ const About = () => {
         {/* About Our Company Section */}
         <section className="mb-20">
           <h1 className="text-4xl font-serif text-olive mb-8">About Our Company</h1>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <p className="text-olive-dark leading-relaxed">
-                Led by qualified Chartered Accountants from the South African Institute of Chartered Accountants (SAICA) – recognized globally as one of the most trusted and respected accounting bodies – we deliver top-tier financial solutions at a fraction of the cost. Operating 100% virtually, we support businesses across multiple time zones, ensuring seamless collaboration and tailored accounting services that drive results.
-              </p>
-              <p className="text-olive-dark leading-relaxed">
-                With a focus on accuracy, reliability, and innovation, we go beyond the traditional role of accountants. We are your partners in success, offering affordable, all-inclusive online accounting services that meet your unique business needs.
-              </p>
-            </div>
-            <div className="bg-sand-light p-8 rounded-3xl">
-              <img
-                src="/lovable-uploads/fbb2adb5-1cf5-4ec3-98bb-a65134ce25d4.png"
-                alt="Our technology partners and integrations"
-                className="w-full h-auto object-contain"
-              />
-            </div>
+          <div className="space-y-6">
+            <p className="text-olive-dark leading-relaxed">
+              Led by qualified Chartered Accountants from the South African Institute of Chartered Accountants (SAICA) – recognized globally as one of the most trusted and respected accounting bodies – we deliver top-tier financial solutions at a fraction of the cost. Operating 100% virtually, we support businesses across multiple time zones, ensuring seamless collaboration and tailored accounting services that drive results.
+            </p>
+            <p className="text-olive-dark leading-relaxed">
+              With a focus on accuracy, reliability, and innovation, we go beyond the traditional role of accountants. We are your partners in success, offering affordable, all-inclusive online accounting services that meet your unique business needs.
+            </p>
           </div>
         </section>
 
