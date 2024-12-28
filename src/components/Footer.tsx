@@ -56,9 +56,14 @@ export const Footer = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/book-now" className="text-sand opacity-90 hover:opacity-100">
+                <a 
+                  href="https://calendly.com/rilinde-nkhumeleni/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sand opacity-90 hover:opacity-100"
+                >
                   Book Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>

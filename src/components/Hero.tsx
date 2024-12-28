@@ -12,9 +12,15 @@ export const Hero = () => {
             we embrace this evolution.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-sand-light text-olive px-8 py-3 rounded hover:bg-sand transition-colors">
-              Get Started
-            </button>
+            <a 
+              href="https://calendly.com/rilinde-nkhumeleni/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-sand-light text-olive px-8 py-3 rounded hover:bg-sand transition-colors">
+                Get Started
+              </button>
+            </a>
             <button className="border border-sand-light text-sand-light px-8 py-3 rounded hover:bg-olive-light transition-colors">
               Learn More
             </button>

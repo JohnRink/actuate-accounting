@@ -24,9 +24,15 @@ export const Navigation = () => {
           <Button variant="ghost" className="text-sand-light hover:text-sand">
             Login
           </Button>
-          <Button className="bg-sand-light text-olive hover:bg-sand">
-            Book now
-          </Button>
+          <a 
+            href="https://calendly.com/rilinde-nkhumeleni/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-sand-light text-olive hover:bg-sand">
+              Book now
+            </Button>
+          </a>
         </div>
       </div>
     </nav>
