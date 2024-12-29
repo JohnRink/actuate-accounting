@@ -4,7 +4,7 @@ import { formatDistance } from "date-fns";
 import { CreateBlogPost } from "@/components/CreateBlogPost";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { PlusCircle, XCircle } from "lucide-react";
+import { PlusCircle, XCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 interface BlogPost {
   id: number;
@@ -13,37 +13,24 @@ interface BlogPost {
   date: string;
   category: string;
   imageUrl: string;
+  expanded?: boolean;
 }
-
-const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: "Digital Transformation in Modern Business",
-    description: "Explore how digital transformation is reshaping business operations and customer experiences in the modern era.",
-    date: "2024-02-20",
-    category: "Digital Transformation",
-    imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
-  },
-  {
-    id: 2,
-    title: "The Future of Work: Remote Teams and Digital Tools",
-    description: "Discover how remote work is changing the workplace landscape and the tools that make it possible.",
-    date: "2024-02-15",
-    category: "Future of Work",
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
-  },
-  {
-    id: 3,
-    title: "Cybersecurity Best Practices for Businesses",
-    description: "Learn essential cybersecurity practices to protect your business in an increasingly digital world.",
-    date: "2024-02-10",
-    category: "Security",
-    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
-  },
-];
 
 const Blog = () => {
   const [showCreatePost, setShowCreatePost] = useState(false);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  // This would typically come from an authentication system
+  const isCreator = true; // For demonstration, you would replace this with actual auth logic
+
+  const togglePostExpansion = (postId: number) => {
+    setBlogPosts(posts =>
+      posts.map(post =>
+        post.id === postId
+          ? { ...post, expanded: !post.expanded }
+          : post
+      )
+    );
+  };
 
   return (
     <div className="min-h-screen bg-sand-light">
@@ -56,26 +43,28 @@ const Blog = () => {
           <p className="text-olive-light text-lg max-w-2xl mx-auto">
             Stay updated with our latest insights, industry trends, and expert perspectives on digital transformation and business innovation.
           </p>
-          <Button
-            onClick={() => setShowCreatePost(!showCreatePost)}
-            className="mt-6"
-            variant="outline"
-          >
-            {showCreatePost ? (
-              <>
-                <XCircle className="mr-2 h-4 w-4" />
-                Cancel
-              </>
-            ) : (
-              <>
-                <PlusCircle className="mr-2 h-4 w-4" />
-                Create New Post
-              </>
-            )}
-          </Button>
+          {isCreator && (
+            <Button
+              onClick={() => setShowCreatePost(!showCreatePost)}
+              className="mt-6"
+              variant="outline"
+            >
+              {showCreatePost ? (
+                <>
+                  <XCircle className="mr-2 h-4 w-4" />
+                  Cancel
+                </>
+              ) : (
+                <>
+                  <PlusCircle className="mr-2 h-4 w-4" />
+                  Create New Post
+                </>
+              )}
+            </Button>
+          )}
         </div>
 
-        {showCreatePost && (
+        {showCreatePost && isCreator && (
           <div className="max-w-2xl mx-auto mb-12 bg-white p-6 rounded-lg shadow">
             <h2 className="text-2xl font-serif font-bold text-olive mb-6">Create New Post</h2>
             <CreateBlogPost />
@@ -99,17 +88,27 @@ const Blog = () => {
                     {formatDistance(new Date(post.date), new Date(), { addSuffix: true })}
                   </span>
                 </div>
-                <CardTitle className="text-xl font-serif text-olive hover:text-olive-dark cursor-pointer">
-                  {post.title}
-                </CardTitle>
+                <CardTitle className="text-xl font-serif text-olive">{post.title}</CardTitle>
                 <CardDescription className="text-olive-light">
-                  {post.description}
+                  {post.expanded ? post.description : `${post.description.slice(0, 150)}...`}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <button className="text-olive hover:text-olive-dark font-medium">
-                  Read more →
-                </button>
+                <Button 
+                  variant="ghost" 
+                  onClick={() => togglePostExpansion(post.id)}
+                  className="flex items-center gap-2 text-olive hover:text-olive-dark"
+                >
+                  {post.expanded ? (
+                    <>
+                      Read less <ChevronUp className="h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Read more <ChevronDown className="h-4 w-4" />
+                    </>
+                  )}
+                </Button>
               </CardContent>
             </Card>
           ))}
