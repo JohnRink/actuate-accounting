@@ -1,6 +1,10 @@
 import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDistance } from "date-fns";
+import { CreateBlogPost } from "@/components/CreateBlogPost";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { PlusCircle, XCircle } from "lucide-react";
 
 interface BlogPost {
   id: number;
@@ -39,6 +43,8 @@ const blogPosts: BlogPost[] = [
 ];
 
 const Blog = () => {
+  const [showCreatePost, setShowCreatePost] = useState(false);
+
   return (
     <div className="min-h-screen bg-sand-light">
       <Navigation />
@@ -50,7 +56,31 @@ const Blog = () => {
           <p className="text-olive-light text-lg max-w-2xl mx-auto">
             Stay updated with our latest insights, industry trends, and expert perspectives on digital transformation and business innovation.
           </p>
+          <Button
+            onClick={() => setShowCreatePost(!showCreatePost)}
+            className="mt-6"
+            variant="outline"
+          >
+            {showCreatePost ? (
+              <>
+                <XCircle className="mr-2 h-4 w-4" />
+                Cancel
+              </>
+            ) : (
+              <>
+                <PlusCircle className="mr-2 h-4 w-4" />
+                Create New Post
+              </>
+            )}
+          </Button>
         </div>
+
+        {showCreatePost && (
+          <div className="max-w-2xl mx-auto mb-12 bg-white p-6 rounded-lg shadow">
+            <h2 className="text-2xl font-serif font-bold text-olive mb-6">Create New Post</h2>
+            <CreateBlogPost />
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
