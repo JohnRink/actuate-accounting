@@ -1,17 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { PlusCircle, XCircle } from "lucide-react";
-
-interface BlogHeaderProps {
-  showCreatePost: boolean;
-  setShowCreatePost: (show: boolean) => void;
-  isCreator: boolean;
-}
-
-export const BlogHeader = ({
-  showCreatePost,
-  setShowCreatePost,
-  isCreator,
-}: BlogHeaderProps) => {
+export const BlogHeader = () => {
   return (
     <div className="mb-12 text-center">
       <h1 className="text-4xl font-serif font-bold text-olive mb-4">
@@ -21,25 +8,6 @@ export const BlogHeader = ({
         Stay updated with our latest insights, industry trends, and expert
         perspectives on digital transformation and business innovation.
       </p>
-      {isCreator && (
-        <Button
-          onClick={() => setShowCreatePost(!showCreatePost)}
-          className="mt-6"
-          variant="outline"
-        >
-          {showCreatePost ? (
-            <>
-              <XCircle className="mr-2 h-4 w-4" />
-              Cancel
-            </>
-          ) : (
-            <>
-              <PlusCircle className="mr-2 h-4 w-4" />
-              Create New Post
-            </>
-          )}
-        </Button>
-      )}
     </div>
   );
 };

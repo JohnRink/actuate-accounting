@@ -21,9 +21,6 @@ export const Navigation = () => {
           Blog
         </Link>
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="text-sand-light hover:text-sand">
-            Login
-          </Button>
           <a 
             href="https://calendly.com/rilinde-nkhumeleni/30min"
             target="_blank"
