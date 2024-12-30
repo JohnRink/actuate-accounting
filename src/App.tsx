@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Services from "./pages/Services";
 import { Footer } from "./components/Footer";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/services" element={<Services />} />
             </Routes>
           </div>
           <Footer />
