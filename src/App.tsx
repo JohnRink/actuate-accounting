@@ -15,6 +15,7 @@ import SecondmentServices from "./pages/services/SecondmentServices";
 import TechnologyServices from "./pages/services/TechnologyServices";
 import TrainingServices from "./pages/services/TrainingServices";
 import AuditSupport from "./pages/services/AuditSupport";
+import AuditLiaison from "./pages/services/AuditLiaison";
 import { Footer } from "./components/Footer";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/services/technology" element={<TechnologyServices />} />
               <Route path="/services/training" element={<TrainingServices />} />
               <Route path="/services/audit-support" element={<AuditSupport />} />
+              <Route path="/services/audit-liaison" element={<AuditLiaison />} />
             </Routes>
           </div>
           <Footer />
