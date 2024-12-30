@@ -12,15 +12,39 @@ const AuditSupport = () => {
           </p>
 
           <h2 className="text-2xl font-serif text-olive mt-8 mb-4">Our Support Services</h2>
-          <ul className="list-disc pl-6">
-            <li>Audit Planning and Risk Assessment</li>
-            <li>Internal Control Evaluation and Assurance</li>
-            <li>Facilitation of Audit Fieldwork</li>
-            <li>Substantive Audit Execution</li>
-            <li>Financial Statements Review</li>
-            <li>Audit Progress Monitoring</li>
-            <li>Resolution of Queries</li>
-            <li>Audit Engagement Finalization and Closing</li>
+          <ul className="space-y-4">
+            <li className="flex flex-col">
+              <span className="font-semibold">Audit Planning and Risk Assessment</span>
+              <p className="text-sm text-olive-dark">Development of comprehensive audit strategies, including risk assessment procedures, materiality determination, and sampling methodologies aligned with ISA and GAAS requirements.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Internal Control Evaluation and Assurance</span>
+              <p className="text-sm text-olive-dark">Assessment of internal control systems, documentation of control processes, and testing of control effectiveness in accordance with ISA 315 and AS 2201.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Facilitation of Audit Fieldwork</span>
+              <p className="text-sm text-olive-dark">Coordination and execution of audit procedures, including substantive testing, analytical procedures, and evidence gathering to support audit opinions.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Substantive Audit Execution</span>
+              <p className="text-sm text-olive-dark">Performance of detailed testing procedures, including account analysis, confirmation procedures, and cut-off testing to verify financial statement assertions.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Financial Statements Review</span>
+              <p className="text-sm text-olive-dark">Comprehensive review of financial statements and disclosures to ensure compliance with applicable accounting standards and regulatory requirements.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Audit Progress Monitoring</span>
+              <p className="text-sm text-olive-dark">Regular tracking of audit milestones, identification of potential bottlenecks, and implementation of solutions to maintain audit efficiency.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Resolution of Queries</span>
+              <p className="text-sm text-olive-dark">Prompt response to audit queries, coordination with relevant departments, and documentation of resolutions to support audit conclusions.</p>
+            </li>
+            <li className="flex flex-col">
+              <span className="font-semibold">Audit Engagement Finalization and Closing</span>
+              <p className="text-sm text-olive-dark">Support in completing audit documentation, preparing closing memorandums, and ensuring all audit requirements are met for engagement completion.</p>
+            </li>
           </ul>
         </div>
       </div>
