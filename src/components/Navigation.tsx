@@ -30,6 +30,9 @@ export const Navigation = () => {
                   <Link to="/services/statutory" className="block text-sm hover:text-olive">
                     Statutory Financial Statement Preparation
                   </Link>
+                  <Link to="/services/audit-liaison" className="block text-sm hover:text-olive">
+                    Audit Liaison Services
+                  </Link>
                   <Link to="/services/standards" className="block text-sm hover:text-olive">
                     New Accounting Standards Adoption
                   </Link>
@@ -44,9 +47,6 @@ export const Navigation = () => {
                   </Link>
                   
                   <h3 className="font-medium mt-4 mb-2 text-olive">Services - For Audit Teams</h3>
-                  <Link to="/services/audit-liaison" className="block text-sm hover:text-olive">
-                    Audit Liaison Services
-                  </Link>
                   <Link to="/services/audit-support" className="block text-sm hover:text-olive">
                     Audit Support Services
                   </Link>
