@@ -17,20 +17,6 @@ const StatutoryServices = () => {
             <li>Accounts preparation for LLPs, Partnerships, Sole Traders, Trusts, Charities, and Academy Accounts</li>
             <li>iXBRL Submissions using CoreFiling's Seahorse Tagging Software</li>
           </ul>
-
-          <h2 className="text-2xl font-serif text-olive mt-8 mb-4">Audit Liaison Services</h2>
-          <ul className="list-disc pl-6">
-            <li>Audit Planning Assistance</li>
-            <li>Interpretation of Financial Data</li>
-            <li>Audit Evidence Compilation</li>
-            <li>Audit Progress Monitoring</li>
-            <li>Coordination of Closing Meetings</li>
-            <li>Response to Audit Findings</li>
-            <li>Review of Draft Financial Statements</li>
-            <li>Facilitation of Audit Fieldwork</li>
-            <li>Conflict Resolution</li>
-            <li>Continuous Improvement Initiatives</li>
-          </ul>
         </div>
       </div>
     </div>
