@@ -26,9 +26,9 @@ interface BlogPostProps {
 export const BlogPost = ({ post, onToggleExpansion }: BlogPostProps) => {
   return (
     <Card className="hover:shadow-lg transition-shadow duration-300">
-      <div className="aspect-video w-full overflow-hidden rounded-t-lg">
+      <div className="aspect-[16/9] w-full overflow-hidden rounded-t-lg">
         <img
-          src={post.imageUrl}
+          src="/lovable-uploads/d48741ef-3592-4fd2-817e-82a7203655f1.png"
           alt={post.title}
           className="w-full h-full object-cover"
         />
@@ -40,7 +40,7 @@ export const BlogPost = ({ post, onToggleExpansion }: BlogPostProps) => {
             {formatDistance(new Date(post.date), new Date(), { addSuffix: true })}
           </span>
         </div>
-        <CardTitle className="text-xl font-serif text-olive">{post.title}</CardTitle>
+        <CardTitle className="text-lg font-serif text-olive">{post.title}</CardTitle>
         <div className="text-sm text-olive-light mb-4">By {post.author}</div>
         <CardDescription className="text-olive-light whitespace-pre-line">
           {post.expanded ? post.description : `${post.description.slice(0, 150)}...`}
