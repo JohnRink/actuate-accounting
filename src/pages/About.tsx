@@ -1,38 +1,37 @@
 import { Navigation } from "@/components/Navigation";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-sand">
       <Navigation />
       <div className="container mx-auto py-16 px-4">
-        {/* About Our Company Section */}
+        {/* About Section */}
         <section className="mb-20">
-          <h1 className="text-4xl font-serif text-olive mb-8">About Our Company</h1>
-          <div className="space-y-6">
-            <p className="text-olive-dark leading-relaxed">
-              Led by qualified Chartered Accountants from the South African Institute of Chartered Accountants (SAICA) – recognized globally as one of the most trusted and respected accounting bodies – we deliver top-tier financial solutions at a fraction of the cost. Operating 100% virtually, we support businesses across multiple time zones, ensuring seamless collaboration and tailored accounting services that drive results.
+          <h1 className="text-4xl font-serif text-olive mb-8">About Actuate Accounting Outsourcing</h1>
+          <div className="space-y-6 text-olive-dark">
+            <p className="leading-relaxed">
+              At Actuate, we are redefining what it means to deliver exceptional financial solutions. Led by qualified Chartered Accountants from the South African Institute of Chartered Accountants (SAICA) – one of the most trusted and globally respected accounting bodies – we provide premium-quality accounting services at a fraction of the cost.
             </p>
-            <p className="text-olive-dark leading-relaxed">
-              With a focus on accuracy, reliability, and innovation, we go beyond the traditional role of accountants. We are your partners in success, offering affordable, all-inclusive online accounting services that meet your unique business needs.
+            <p className="leading-relaxed">
+              Operating 100% virtually, we support businesses across multiple time zones with seamless collaboration and tailored services that drive measurable results. From startups to multinational corporations, we are your strategic partners in achieving financial clarity and operational efficiency.
             </p>
           </div>
         </section>
 
-        {/* Our Objective Section */}
+        {/* Mission Section */}
         <section className="mb-20 bg-sand-light p-8 rounded-3xl">
-          <h2 className="text-3xl font-serif text-olive mb-6">Our Objective</h2>
+          <h2 className="text-3xl font-serif text-olive mb-6">Our Mission</h2>
           <div className="space-y-6 text-olive-dark">
             <p className="leading-relaxed">
-              Our mission is to be the trusted partner our clients rely on to navigate the complex financial reporting landscape at a reasonable cost. We are committed to building strong, collaborative relationships founded on trust, confidentiality, and professionalism.
+              Our mission is to be the trusted financial partner businesses rely on to navigate the complexities of financial reporting and compliance. We are committed to building strong, collaborative relationships founded on trust, confidentiality, and professionalism.
             </p>
             <p className="leading-relaxed">
-              At the heart of our values lies integrity and ethical conduct. We uphold the highest standards of honesty, transparency, and fairness in every interaction. Clients can count on us for objective, unbiased guidance that protects their interests.
+              With integrity and ethical conduct at the core of our values, we uphold the highest standards of transparency, fairness, and honesty in every interaction. Clients can count on us for unbiased guidance that protects their interests while aligning with their goals.
             </p>
             <p className="leading-relaxed">
-              As a forward-thinking company, we embrace technological advancements and continuously invest in cutting-edge solutions. We are passionate about helping businesses succeed. Our flexible approach allows us to adapt to evolving client requirements, ensuring you stay on track to achieve your goals while reducing costs.
-            </p>
-            <p className="leading-relaxed">
-              Whether you're a startup navigating uncharted waters or an established company seeking fresh insights, we are your trusted partner in financial excellence.
+              As a forward-thinking company, we embrace the latest technological advancements to streamline processes and provide innovative, cost-effective solutions. Whether you're a startup navigating uncharted waters or an established business seeking new insights, we are here to help you succeed.
             </p>
           </div>
         </section>
@@ -47,50 +46,89 @@ const About = () => {
                 Your time is valuable—don't waste it copying, pasting, and assembling data. Outsource your end-to-end financial reporting process to Actuate, where we double-check your numbers, update analyses and commentary, and deliver polished presentations just in time for your board meetings.
               </p>
               <p className="text-olive-dark leading-relaxed mt-4">
-                Gain the speed and flexibility to understand the "why" behind your financials, keep executives informed, and avoid the cost of additional headcount. With our team of former Big 4 auditors, we reduce the risk of errors, manage external auditor requests, and ensure seamless audit processes so you can focus on key operational tasks.
+                Gain the speed and flexibility to understand the "why" behind your financials, keep executives informed, and avoid the cost of additional headcount. With our team of former Big 4 auditors, we reduce the risk of errors, manage external auditor requests, and ensure seamless audit processes—so you can focus on what matters most.
               </p>
             </div>
             <div className="bg-sand-light p-8 rounded-3xl">
               <h3 className="text-2xl font-serif text-olive mb-4">Audit Firms</h3>
               <p className="text-olive-dark leading-relaxed">
-                Facing a busy season and tight deadlines? Partnering with Actuate Accounting Outsourcing is like having a dream team at your fingertips. Our Big 4-trained auditors can handle SOX compliance control testing, substantive audit procedures, and work reviews.
+                Facing a busy season and tight deadlines? Partnering with Actuate is like having an expert team on demand. Our Big 4-trained auditors can handle SOX compliance control testing, substantive audit procedures, and audit work reviews.
               </p>
               <p className="text-olive-dark leading-relaxed mt-4">
-                We ensure accurate financial statements, compliance with GAAP, preparation of misstatement schedules, and audit reports. Additionally, we present results to clients and finalize engagements, giving you more time to meet deadlines confidently.
+                We ensure accurate financial statements, compliance with GAAP, preparation of misstatement schedules, and audit reports. From presenting results to clients to finalizing engagements, we give you the time and confidence to meet your deadlines seamlessly.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section>
-          <h2 className="text-3xl font-serif text-olive mb-6">Benefits of Working with Us</h2>
+        {/* Why Choose Actuate Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-serif text-olive mb-6">Why Choose Actuate?</h2>
           <ul className="space-y-4 text-olive-dark">
             <li className="flex items-start">
               <span className="mr-2">•</span>
-              <span>Access to top-tier talent: Reduce your employment costs by up to 85% with South African professionals.</span>
+              <div>
+                <span className="font-semibold">Access to Top-Tier Talent: </span>
+                Reduce employment costs by up to 85% with South African professionals trained to the highest standards.
+              </div>
             </li>
             <li className="flex items-start">
               <span className="mr-2">•</span>
-              <span>Direct support from founders: Enjoy easy issue resolution with hands-on guidance.</span>
+              <div>
+                <span className="font-semibold">Direct Support from Founders: </span>
+                Benefit from hands-on guidance and easy issue resolution with our involved leadership team.
+              </div>
             </li>
             <li className="flex items-start">
               <span className="mr-2">•</span>
-              <span>Flexible time zone coverage: Receive in-day and out-of-day support across the USA and UK.</span>
+              <div>
+                <span className="font-semibold">Flexible Time Zone Coverage: </span>
+                Receive in-day and out-of-day support tailored to your time zones in the USA, UK, and beyond.
+              </div>
             </li>
             <li className="flex items-start">
               <span className="mr-2">•</span>
-              <span>Superior talent: Leverage multi-skilled professionals with expertise beyond what is commonly available elsewhere.</span>
+              <div>
+                <span className="font-semibold">Multi-Skilled Professionals: </span>
+                Leverage expertise that goes beyond traditional accounting roles for deeper insights and solutions.
+              </div>
             </li>
             <li className="flex items-start">
               <span className="mr-2">•</span>
-              <span>Excellent communication: South Africa's strong English proficiency ensures seamless collaboration.</span>
+              <div>
+                <span className="font-semibold">Excellent Communication: </span>
+                Collaborate seamlessly with professionals fluent in English, ensuring clarity and understanding at every stage.
+              </div>
             </li>
             <li className="flex items-start">
               <span className="mr-2">•</span>
-              <span>No long-term contracts: Easy exit arrangements provide confidence in starting with Actuate.</span>
+              <div>
+                <span className="font-semibold">No Long-Term Contracts: </span>
+                Enjoy flexibility with easy exit arrangements, providing peace of mind as you begin working with us.
+              </div>
             </li>
           </ul>
+        </section>
+
+        {/* Our Approach Section */}
+        <section className="mb-20 bg-sand-light p-8 rounded-3xl">
+          <h2 className="text-3xl font-serif text-olive mb-6">Our Approach</h2>
+          <p className="text-olive-dark leading-relaxed">
+            We go beyond the traditional role of accountants by embracing innovation and a client-centric mindset. With cutting-edge tools and methodologies, we deliver actionable insights, minimize risks, and help you achieve your financial goals.
+          </p>
+        </section>
+
+        {/* Contact Section */}
+        <section className="text-center">
+          <h2 className="text-3xl font-serif text-olive mb-6">Contact Us</h2>
+          <p className="text-olive-dark mb-8">
+            Ready to streamline your accounting processes and drive results? Get in touch with us today for a free consultation and discover how Actuate can transform your financial operations.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-olive hover:bg-olive-light text-sand">
+              Schedule Your Free Consultation
+            </Button>
+          </Link>
         </section>
       </div>
     </div>
