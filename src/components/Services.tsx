@@ -34,7 +34,22 @@ const services = [
     title: "Fractional Financial Controller Services",
     description: "Part-time financial expertise tailored to your business needs.",
     price: "from $10/h",
-    link: "/services/controlling"
+    link: "/services/controlling",
+    details: {
+      intro: "A fractional controller provides many of the same services and responsibilities as a comprehensive controller but on a part-time or as-needed basis. This model is ideal for existing financial controllers who need an extra pair of hands and support to free up time to focus on operations and strategy.",
+      services: [
+        "Financial Reporting: Prepares accurate financial statements, including balance sheets, income statements, and cash flow statements.",
+        "Budgeting and Forecasting: Sets budgets, monitors performance, adjusts as needed, and predicts financial outcomes.",
+        "Internal Controls: Establishes and enforces controls to ensure data accuracy, prevent fraud, and safeguard assets.",
+        "Cash Flow Management: Monitors and manages liquidity to meet obligations.",
+        "Financial Process Improvements: Identifies and implements efficiencies for cost savings.",
+        "Accounting System Management: Optimizes accounting systems and implements new tools if needed.",
+        "Income Tax and VAT: Ensures compliance and prepares data for tax filings.",
+        "External Audit Liaison: Acts as the primary contact for external auditors.",
+        "Strategic Planning: Shapes financial strategies and provides actionable insights.",
+        "Team Management: Oversees and trains in-house accounting teams."
+      ]
+    }
   },
   {
     title: "Finance Function Support",
