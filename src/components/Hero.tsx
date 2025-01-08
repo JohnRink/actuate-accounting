@@ -7,7 +7,7 @@ export const Hero = () => {
             Technology and remote working are revolutionizing the accounting landscape
           </h1>
           <p className="text-sand text-lg mb-8">
-            Traditional paradigms are being redefined by innovative technology, bringing unprecedented efficiency and access to expertise on a global scale. At Actuate, we embrace this transformation by offering flexible, cost-effective solutions at a fraction of the cost of permanent in-country staff
+            Traditional paradigms are being redefined by innovative technology, bringing unprecedented efficiency and access to expertise on a global scale. At Actuate, we embrace this transformation by offering flexible, cost-effective solutions at a fraction of the cost of permanent in-country staff.
           </p>
           <div className="flex justify-center">
             <a 
