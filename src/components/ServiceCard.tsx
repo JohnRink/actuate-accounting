@@ -1,20 +1,54 @@
+import { Service } from "@/types/services";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { ServiceDetailsContent } from "./ServiceDetailsContent";
 
 interface ServiceCardProps {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
+  service: Service;
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
 }
 
-export const ServiceCard = ({ title, description, image, link }: ServiceCardProps) => {
+export const ServiceCard = ({ service, isOpen, onOpenChange }: ServiceCardProps) => {
   return (
-    <Link to={link} className="group">
-      <div className="bg-sand-light p-6 rounded-lg transition-transform transform hover:-translate-y-1">
-        <img src={image} alt={title} className="w-full h-48 object-cover rounded mb-4" />
-        <h3 className="text-olive text-xl font-serif mb-2">{title}</h3>
-        <p className="text-olive-dark text-sm">{description}</p>
-      </div>
-    </Link>
+    <Card className="bg-sand-light">
+      <CardHeader>
+        <CardTitle className="text-xl font-serif text-olive">{service.title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-olive-dark mb-4">{service.description}</p>
+        <p className="text-lg font-semibold text-olive">{service.price}</p>
+      </CardContent>
+      <CardFooter className="flex flex-col w-full">
+        {service.details ? (
+          <Collapsible
+            open={isOpen}
+            onOpenChange={onOpenChange}
+            className="w-full"
+          >
+            <CollapsibleTrigger asChild>
+              <Button variant="outline" className="w-full mb-2">
+                Learn More
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <ServiceDetailsContent details={service.details} />
+            </CollapsibleContent>
+          </Collapsible>
+        ) : (
+          <Link to={service.link} className="w-full">
+            <Button variant="outline" className="w-full">
+              Learn More
+            </Button>
+          </Link>
+        )}
+      </CardFooter>
+    </Card>
   );
 };
