@@ -8,6 +8,7 @@ interface BlogGridProps {
     date: string;
     category: string;
     imageUrl: string;
+    author: string;
     expanded?: boolean;
   }>;
   onToggleExpansion: (postId: number) => void;
