@@ -77,7 +77,38 @@ const services = [
     title: "Audit Firm Support",
     description: "Professional assistance for audit processes and compliance.",
     price: "from $15/h",
-    link: "/services/audit-support"
+    link: "/services/audit-support",
+    details: {
+      intro: "Managing audit engagements requires skilled professionals who can balance technical expertise, leadership, and client relationship management. At Actuate, we provide Big 4 Experienced Auditors to support audit firms by performing high-quality audit work, managing and coaching teams, and leading client relationships to ensure seamless execution of engagements.\n\nOur auditors integrate seamlessly with your teams, offering interim support or long-term secondments tailored to your needs.",
+      services: [
+        "Performing detailed audit work to ensure accuracy and compliance with firm methodology",
+        "Managing and coaching audit teams to achieve high-quality deliverables",
+        "Leading day-to-day client relationships, fostering trust and effective communication",
+        "Reviewing completed work and financial statements to maintain quality standards",
+        "Addressing and clearing client queries and review points promptly and effectively"
+      ],
+      schedule: {
+        title: "A Typical Day in Action:",
+        timeSlots: [
+          {
+            time: "Morning",
+            activity: "A team check-in to align priorities, address challenges, and review project timelines, tasks, and areas requiring special attention."
+          },
+          {
+            time: "Mid-Morning",
+            activity: "Overseeing the review of audit files, providing constructive feedback to team members, and ensuring accuracy and quality. Participating in virtual meetings with clients to discuss audit progress, identify opportunities to add value, and resolve bottlenecks."
+          },
+          {
+            time: "Afternoon",
+            activity: "Focusing on completing complex audit work, reviewing junior team members' work, and coaching members on technical challenges."
+          },
+          {
+            time: "Late Afternoon",
+            activity: "Checking in with senior management on audit progress to align on deliverables and identify areas for process improvement."
+          }
+        ]
+      }
+    }
   },
   {
     title: "Gen AI and Accounting Technologies",
@@ -123,12 +154,26 @@ export const Services = () => {
                       </Button>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="mt-2 space-y-2 text-sm text-olive-dark">
-                      <p className="mb-4">{service.details.intro}</p>
-                      <ul className="list-disc pl-4 space-y-2">
-                        {service.details.services.map((item, index) => (
-                          <li key={index}>{item}</li>
-                        ))}
-                      </ul>
+                      <p className="mb-4 whitespace-pre-line">{service.details.intro}</p>
+                      {service.details.services && (
+                        <ul className="list-disc pl-4 space-y-2">
+                          {service.details.services.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                      {service.details.schedule && (
+                        <div className="mt-4">
+                          <h4 className="font-semibold mb-2">{service.details.schedule.title}</h4>
+                          <div className="space-y-2">
+                            {service.details.schedule.timeSlots.map((slot, index) => (
+                              <div key={index} className="border-l-2 border-olive pl-4">
+                                <span className="font-semibold">{slot.time}:</span> {slot.activity}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </CollapsibleContent>
                   </Collapsible>
                 ) : (
