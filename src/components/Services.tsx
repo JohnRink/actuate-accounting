@@ -5,7 +5,17 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     title: "Financial Controller Services",
-    description: "Comprehensive financial leadership and oversight for your business operations.",
+    description: "This model provides businesses access to high-level financial expertise without requiring a full-time hire, ideal for small to medium-sized businesses or startups with limited resources.\n\n" +
+      "• Financial Reporting: Prepares accurate financial statements, including balance sheets, income statements, and cash flow statements.\n" +
+      "• Budgeting and Forecasting: Sets budgets, monitors performance, adjusts as needed, and predicts financial outcomes.\n" +
+      "• Internal Controls: Establishes and enforces controls to ensure data accuracy, prevent fraud, and safeguard assets.\n" +
+      "• Cash Flow Management: Monitors and manages liquidity to meet obligations.\n" +
+      "• Financial Process Improvements: Identifies and implements efficiencies for cost savings.\n" +
+      "• Accounting System Management: Optimizes accounting systems and implements new tools if needed.\n" +
+      "• Income Tax and VAT: Ensures compliance and prepares data for tax filings.\n" +
+      "• External Audit Liaison: Acts as the primary contact for external auditors.\n" +
+      "• Strategic Planning: Shapes financial strategies and provides actionable insights.\n" +
+      "• Team Management: Oversees and trains in-house accounting teams.",
     price: "from $12/h",
     link: "/services/controlling"
   },
@@ -53,7 +63,7 @@ export const Services = () => {
                 <CardTitle className="text-xl font-serif text-olive">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-olive-dark mb-4">{service.description}</p>
+                <p className="text-olive-dark mb-4 whitespace-pre-line">{service.description}</p>
                 <p className="text-lg font-semibold text-olive">{service.price}</p>
               </CardContent>
               <CardFooter>
