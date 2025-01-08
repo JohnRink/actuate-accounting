@@ -55,7 +55,23 @@ const services = [
     title: "Finance Function Support",
     description: "Comprehensive support for your finance operations and processes.",
     price: "from $10/h",
-    link: "/services/secondment"
+    link: "/services/secondment",
+    details: {
+      intro: "Managing a modern finance function requires flexibility, expertise, and precision. At Actuate, we provide comprehensive Finance Function Support by introducing experienced accountants into your accounting processes to improve efficiency and meet your period-end deadlines.\n\nOur services are tailored to your needs, offering full outsourced solutions, interim support during busy periods, short-term cover, month-end assistance, or specific technical expertise for complex accounting matters.",
+      services: [
+        "Accounts Payable Management",
+        "Accounts Receivable Management",
+        "General Ledger Maintenance",
+        "Bank Reconciliation",
+        "Payroll Processing",
+        "Financial Statement Preparation",
+        "Budgeting and Forecasting",
+        "Financial and Management Reporting",
+        "Cost and Inventory Management",
+        "Fixed Assets Management",
+        "Cash Flow Management"
+      ]
+    }
   },
   {
     title: "Audit Firm Support",
