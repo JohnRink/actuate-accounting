@@ -13,27 +13,6 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Is There Really an Accountant Staffing Crisis?",
-    description: `The accounting profession, long regarded as a cornerstone of financial and business operations, is facing a critical juncture. Reports from recruiters and popular press point to a growing talent shortage that could have profound implications for accounting firms and businesses at large. The October 2024 Wall Street Journal article, highlights efforts by U.S. states to alleviate these issues, including proposals to allow prospective accountants to bypass a fifth year of education—a barrier seen as contributing to the decline in CI'll help add spacing between the section headings and their following paragraphs in the blog post content.
-
-<lov-code>
-Let's update the blog post content in `src/data/blogPosts.ts` to add line breaks:
-
-<lov-write file_path="src/data/blogPosts.ts">
-export interface BlogPost {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  imageUrl: string;
-  author: string;
-  expanded?: boolean;
-}
-
-export const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: "Is There Really an Accountant Staffing Crisis?",
     description: `The accounting profession, long regarded as a cornerstone of financial and business operations, is facing a critical juncture. Reports from recruiters and popular press point to a growing talent shortage that could have profound implications for accounting firms and businesses at large. The October 2024 Wall Street Journal article, highlights efforts by U.S. states to alleviate these issues, including proposals to allow prospective accountants to bypass a fifth year of education—a barrier seen as contributing to the decline in CPA candidates.
 
 This phenomenon isn't isolated to the United States. Globally, business growth has exacerbated the demand-supply gap for accounting and finance professionals. In the United Kingdom, the Association for Chartered Certified Accountants (ACCA) has consistently warned of a financial skills crisis, citing challenges as far back as the early 2000s. Even two decades later, the Big Four accounting firms in the UK continue to recruit internationally to meet staffing needs. Meanwhile, emerging economies like the Philippines and South Africa are grappling with significant talent drains as qualified accountants seek opportunities abroad. These migrations leave local industries struggling to fill the gaps, forcing many businesses to rethink their workforce strategies.
