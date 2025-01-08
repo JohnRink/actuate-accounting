@@ -34,8 +34,8 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+447570009235" className="text-sand opacity-90 hover:opacity-100">
-                  +447570009235
+                <a href="tel:+447500021326" className="text-sand opacity-90 hover:opacity-100">
+                  +447500021326
                 </a>
               </div>
             </div>
