@@ -8,18 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import type { BlogPost as BlogPostType } from "@/data/blogPosts";
+
+const TRUNCATE_LENGTH = 150;
 
 interface BlogPostProps {
-  post: {
-    id: number;
-    title: string;
-    description: string;
-    date: string;
-    category: string;
-    imageUrl: string;
-    author: string;
-    expanded?: boolean;
-  };
+  post: BlogPostType;
   onToggleExpansion: (postId: number) => void;
 }
 
@@ -28,7 +22,7 @@ export const BlogPost = ({ post, onToggleExpansion }: BlogPostProps) => {
     <Card className="hover:shadow-lg transition-shadow duration-300">
       <div className="aspect-[16/9] w-full overflow-hidden rounded-t-lg">
         <img
-          src="/lovable-uploads/d48741ef-3592-4fd2-817e-82a7203655f1.png"
+          src={post.imageUrl}
           alt={post.title}
           className="w-full h-full object-cover"
         />
@@ -43,7 +37,7 @@ export const BlogPost = ({ post, onToggleExpansion }: BlogPostProps) => {
         <CardTitle className="text-lg font-serif text-olive">{post.title}</CardTitle>
         <div className="text-sm text-olive-light mb-4">By {post.author}</div>
         <CardDescription className="text-olive-light whitespace-pre-line">
-          {post.expanded ? post.description : `${post.description.slice(0, 150)}...`}
+          {post.expanded ? post.description : `${post.description.slice(0, TRUNCATE_LENGTH)}...`}
         </CardDescription>
       </CardHeader>
       <CardContent>

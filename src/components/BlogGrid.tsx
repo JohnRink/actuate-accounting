@@ -1,16 +1,8 @@
 import { BlogPost } from "./BlogPost";
+import type { BlogPost as BlogPostType } from "@/data/blogPosts";
 
 interface BlogGridProps {
-  blogPosts: Array<{
-    id: number;
-    title: string;
-    description: string;
-    date: string;
-    category: string;
-    imageUrl: string;
-    author: string;
-    expanded?: boolean;
-  }>;
+  blogPosts: BlogPostType[];
   onToggleExpansion: (postId: number) => void;
 }
 
