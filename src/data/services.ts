@@ -123,6 +123,16 @@ export const services: Service[] = [
     title: "Crypto Accounting Advisory",
     description: "Expert guidance in digital asset accounting and compliance.",
     price: "from $25/h",
-    link: "/services/technology"
+    link: "/services/technology",
+    details: {
+      intro: "The rise of digital assets has introduced new complexities in accounting and compliance. At Actuate, we provide tailored solutions to help businesses navigate these challenges, ensuring accuracy, transparency, and compliance with evolving regulations.",
+      services: [
+        "Financial Statements Preparation: Comprehensive preparation of financial statements that accurately reflect digital asset transactions and holdings.",
+        "Digital Asset Technical Accounting Memos: Expertly crafted memos addressing the technical accounting treatment of digital assets, aligned with applicable standards.",
+        "Digital Ledger Controls: Implementation and monitoring of robust digital ledger controls to ensure the integrity and security of digital asset records.",
+        "Automating Crypto Tax Calculations: Streamlined tax compliance through automation, ensuring accurate calculations and reporting of crypto-related taxes.",
+        "Digital Asset Proof of Reserves Automation: Leveraging technology to automate the proof of reserves process, enhancing transparency and building stakeholder trust."
+      ]
+    }
   }
 ];
