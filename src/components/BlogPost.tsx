@@ -17,6 +17,7 @@ interface BlogPostProps {
     date: string;
     category: string;
     imageUrl: string;
+    author: string;
     expanded?: boolean;
   };
   onToggleExpansion: (postId: number) => void;
@@ -40,7 +41,8 @@ export const BlogPost = ({ post, onToggleExpansion }: BlogPostProps) => {
           </span>
         </div>
         <CardTitle className="text-xl font-serif text-olive">{post.title}</CardTitle>
-        <CardDescription className="text-olive-light">
+        <div className="text-sm text-olive-light mb-4">By {post.author}</div>
+        <CardDescription className="text-olive-light whitespace-pre-line">
           {post.expanded ? post.description : `${post.description.slice(0, 150)}...`}
         </CardDescription>
       </CardHeader>
