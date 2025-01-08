@@ -8,14 +8,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import ControllingServices from "./pages/services/ControllingServices";
-import StatutoryServices from "./pages/services/StatutoryServices";
-import StandardsServices from "./pages/services/StandardsServices";
-import SecondmentServices from "./pages/services/SecondmentServices";
-import TechnologyServices from "./pages/services/TechnologyServices";
-import TrainingServices from "./pages/services/TrainingServices";
-import AuditSupport from "./pages/services/AuditSupport";
-import AuditLiaison from "./pages/services/AuditLiaison";
 import { Footer } from "./components/Footer";
 
 const queryClient = new QueryClient();
@@ -34,14 +26,6 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/services/controlling" element={<ControllingServices />} />
-              <Route path="/services/statutory" element={<StatutoryServices />} />
-              <Route path="/services/standards" element={<StandardsServices />} />
-              <Route path="/services/secondment" element={<SecondmentServices />} />
-              <Route path="/services/technology" element={<TechnologyServices />} />
-              <Route path="/services/training" element={<TrainingServices />} />
-              <Route path="/services/audit-support" element={<AuditSupport />} />
-              <Route path="/services/audit-liaison" element={<AuditLiaison />} />
             </Routes>
           </div>
           <Footer />
