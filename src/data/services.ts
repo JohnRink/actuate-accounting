@@ -106,7 +106,18 @@ export const services: Service[] = [
     title: "Gen AI and Accounting Technologies",
     description: "Cutting-edge AI solutions for modern accounting challenges.",
     price: "from $20/h",
-    link: "/services/technology"
+    link: "/services/technology",
+    details: {
+      intro: "Managing today's accounting and financial operations requires innovative technology and intelligent tools to enhance efficiency, accuracy, and decision-making. At Actuate, we offer a suite of AI-driven solutions tailored to address the complexities of modern accounting challenges, enabling businesses to stay ahead in a rapidly evolving landscape.\n\nWe help businesses leverage the latest technology to improve the efficiency of their finance function and reduce costs. Our technology solutions include:\n\nSelection and Implementation of Accounting Software\nAutomation of Lease Accounting\nAI-Driven Solutions\n\nWe offer a suite of AI-driven solutions tailored to address the complexities of modern accounting challenges, enabling businesses to stay ahead in a rapidly evolving landscape:",
+      services: [
+        "Automated Data Entry and Reconciliation: Streamline data input and reconciliation processes, reducing manual effort and errors.",
+        "AI-Powered Financial Reporting: Generate detailed, real-time financial statements and insightful reports with AI-driven analytics.",
+        "Predictive Analytics and Forecasting: Identify trends, predict cash flow, and improve financial forecasting using advanced machine learning models.",
+        "AI-Based Budgeting and Variance Analysis: Automate budgeting processes and conduct variance analysis with advanced predictive models.",
+        "Document Management with AI: Organize and analyze financial documents using AI-powered Optical Character Recognition (OCR) and categorization tools.",
+        "Training and Support for AI Integration: We assist businesses in adopting and implementing AI-driven accounting technologies, ensuring seamless integration and user adoption."
+      ]
+    }
   },
   {
     title: "Crypto Accounting Advisory",
