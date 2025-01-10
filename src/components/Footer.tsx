@@ -5,20 +5,12 @@ export const Footer = () => {
   return (
     <footer className="bg-olive text-sand-light text-sm mt-auto">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Actuate */}
           <div>
             <h3 className="font-serif text-lg mb-3">Actuate</h3>
             <p className="text-sand opacity-90 leading-relaxed">
-              Actuate specializes in providing outsourced, South African-based accounting, finance, and Web3 accounting services to clients in Australia, the US, Canada, the UK, and New Zealand.
-            </p>
-          </div>
-
-          {/* Location */}
-          <div>
-            <h3 className="font-serif text-lg mb-3">Location</h3>
-            <p className="text-sand opacity-90">
-              Cape Town, Western Cape, South Africa
+              Actuate Accounting Outsourcing is a South African-based provider of specialized accounting, finance, and Web3 accounting services to clients in Australia, the US, Canada, the UK, and New Zealand.
             </p>
           </div>
 
@@ -28,8 +20,8 @@ export const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:info@actuate.com" className="text-sand opacity-90 hover:opacity-100">
-                  info@actuate.com
+                <a href="mailto:info@acctout.com" className="text-sand opacity-90 hover:opacity-100">
+                  info@acctout.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -57,7 +49,7 @@ export const Footer = () => {
               </div>
               <div>
                 <a 
-                  href="https://calendly.com/rilinde-nkhumeleni/30min" 
+                  href="https://t.co/ij4R8f24qr" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-sand opacity-90 hover:opacity-100"

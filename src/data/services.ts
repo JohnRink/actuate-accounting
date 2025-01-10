@@ -45,7 +45,7 @@ export const services: Service[] = [
   },
   {
     title: "Finance Function Support",
-    description: "Comprehensive support for your finance operations and processes.",
+    description: "Expert accounting support to streamline period-end reporting – Helping your Finance Team prepare accurate financials and report on time.",
     price: "from $10/h",
     link: "/services/secondment",
     details: {
@@ -67,7 +67,7 @@ export const services: Service[] = [
   },
   {
     title: "Audit Firm Support",
-    description: "Professional assistance for audit processes and compliance.",
+    description: "Enhance your audit team with experienced auditors – Flexible, skilled, and ready to meet your firm's needs.",
     price: "from $15/h",
     link: "/services/audit-support",
     details: {
